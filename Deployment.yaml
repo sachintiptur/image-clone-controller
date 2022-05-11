@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-clone
+  labels:
+    app: image-clone
+spec:
+  selector:
+    matchLabels:
+      app: image-clone
+  template:
+    metadata:
+      labels:
+        app: image-clone
+    spec:
+      containers:
+      - name: image-clone-controller
+        image: localhost:5000/image-clone-controller:latest 
