@@ -6,7 +6,7 @@ repository and reconfigures the applications to use these copies. If the applica
 are using the backup registry already, then it will be ignored. Here we are using local
 registry as the backup registry. 
 
-**Setup**
+**Setup Requirements**
 
 ```
 golang
@@ -27,6 +27,9 @@ PS: Not down the port given by minikube, this is needed to access local registry
 In this example it is 65132
 
 2. Clone the git repo
+ ```
+git clone https://github.com/sachintiptur/image-clone-controller.git
+```
 3. Start the controller outside cluster
 
 ```
