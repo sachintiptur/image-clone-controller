@@ -24,7 +24,8 @@ minikube start --insecure-registry "10.0.0.0/24"
 minikube addons enable registry
 ```
 PS: Not down the port given by minikube, this is needed to access local registry from host and also needed in controllers. 
-In this example it is 65132
+In this example it is 65132. So, the const declaration in [deployment_controller](controllers/deployment_controller.go) need to be updated with this port number every time minikube
+is restarted or new cluster is used.
 
 2. Clone the git repo
  ```
